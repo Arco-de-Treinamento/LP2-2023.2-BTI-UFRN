@@ -7,7 +7,12 @@ public class Primos {
         }
 
         int qnt = Integer.parseInt(args[0]); //Converte para número a entrada
-        
+
+        if (qnt <= 0) {
+            System.out.println("A quantidade deve ser maior que zero.");
+            System.exit(0);
+        }
+
         int[] primos = new int[qnt];
         primos[0] = 2;
 
@@ -33,6 +38,7 @@ public class Primos {
         for (int primo : primos) {
             System.out.println(primo);
         }
+
     }
 
 }
